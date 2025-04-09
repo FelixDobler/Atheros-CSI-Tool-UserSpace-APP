@@ -1,5 +1,5 @@
 OBJS = csi_fun.o main.o
-CC = gcc
+CC = gcc -std=c99
 recv_csi: $(OBJS)
 	$(CC) $(OBJS) -o recv_csi
 csi_fun.o: csi_fun.c csi_fun.h
@@ -8,4 +8,3 @@ main.o: main.c csi_fun.h
 	$(CC) -c main.c -o main.o
 clean: 
 	rm -f *.o recv_csi
-
